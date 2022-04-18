@@ -16,7 +16,7 @@ def Gender_prediction():
         model = joblib.load("model-development\Weight-Prediction-using-linear-regression.pkl")
         print(weight_features)
         result = model.predict([weight_features])
-        return render_template('Weight-prediction.html', result=f"{str(result)} Kg")
+        return render_template('Weight-prediction.html', result=f"{int(result)} Kg")
     else:
         return "Unsupported Request Method"
 
